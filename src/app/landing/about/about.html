@@ -1,0 +1,19 @@
+<section id="quienes" data-section tabindex="-1" aria-labelledby="about-title" class="about-section section">
+  <div class="container">
+    <lm-section-bar [section]="content" />
+    <div class="about-headline"><span class="kicker">{{ content.kicker }}</span><h2 id="about-title">{{ content.title }}</h2></div>
+    <div class="about-editorial">
+      <div class="about-photo"><img src="assets/hero-station-960.jpg" alt="Instalaciones LIQUI MOLY Service Station" width="960" height="613" loading="lazy"><div class="photo-corner" aria-hidden="true"></div></div>
+      <div class="about-copy"><div class="pillars">@for (pillar of content.pillars; track pillar.title; let i = $index) { <div class="pillar">@if (i === 1) { <img src="assets/quality-box.png" alt="" width="108" height="108" loading="lazy"> }<h3>{{ pillar.title }}</h3><p>{{ pillar.description }}</p></div> }</div>
+      </div>
+    </div>
+    @if (video; as placeholder) {
+      <figure class="about-video" aria-labelledby="about-video-title">
+        <img src="assets/hero-station-960.jpg" alt="" width="960" height="613" loading="lazy">
+        <div class="about-video-shade" aria-hidden="true"></div>
+        <span class="about-video-play" aria-hidden="true">{{ placeholder.play }}</span>
+        <figcaption><h3 id="about-video-title">{{ placeholder.title }}</h3></figcaption>
+      </figure>
+    }
+  </div>
+</section>

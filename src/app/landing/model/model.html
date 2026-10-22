@@ -1,0 +1,12 @@
+<section id="service" data-section tabindex="-1" aria-labelledby="model-title" class="model-section section">
+  <div class="model-grid-lines" aria-hidden="true"></div>
+  <div class="container">
+    <lm-section-bar [section]="content" />
+    <div class="model-stage">
+      <div class="model-heading"><span class="kicker">{{ content.kicker }}</span><h2 id="model-title" class="display-heading">{{ content.title }}</h2></div>
+      <div class="app-stage"><div class="app-halo" aria-hidden="true"></div><img src="assets/app-mobile-screens@2x.png" alt="Aplicación LIQUI MOLY: indicadores, compra de combustible y seguimiento de estaciones" width="1024" height="651" loading="lazy"></div>
+    </div>
+    <div class="model-principles">@for (feature of content.features; track feature.title) { <article><span class="principle-number">{{ feature.marker }}</span><div><h3>{{ feature.title }}</h3><p>{{ feature.description }}</p></div></article> }</div>
+    <div class="model-action"><lm-action [action]="content.transition.action" variant="outline" /></div>
+  </div>
+</section>

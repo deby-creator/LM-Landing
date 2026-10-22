@@ -1,0 +1,17 @@
+.brand-section { position: relative; background: radial-gradient(ellipse at 85% 30%, #003d7d30, transparent 60%), #080d14; overflow: hidden; }
+.brand-layout { display: grid; grid-template-columns: 1fr 1.06fr; gap: 60px; align-items: center; }
+.brand-copy { position: relative; z-index: 2; } .display-heading { max-width: 640px; }
+.brand-arguments { margin-top: 34px; }
+.brand-argument { display: flex; align-items: center; gap: 20px; padding: 18px 0; border-top: 1px solid var(--line); }
+.brand-argument img { width: 48px; height: 48px; flex-shrink: 0; border-radius: 50%; }
+.brand-argument h3 { font-size: 16px; margin: 0 0 7px; } .brand-argument p { font-size: 14px; margin: 0; max-width: 410px; }
+.brand-world { position: relative; padding-top: 40px; min-width: 0; }
+.world-map { width: 120%; max-width: none; margin-left: -10%; position: relative; z-index: 1; filter: drop-shadow(0 12px 30px #0069d029); }
+.map-orbit { position: absolute; inset: 0 -5% 25%; border-radius: 50%; border: 1px solid #256eac20; transform: rotate(-20deg); background: radial-gradient(ellipse, #0075c510, transparent 65%); }
+.map-orbit::after { content: ''; position: absolute; inset: 14%; border: 1px dashed #256eac30; border-radius: 50%; }
+.brand-world lm-disclosure { margin-top: 36px; display: block; }
+.motorsport-strip { display: flex; align-items: center; justify-content: space-between; gap: 25px; margin-top: 50px; padding: 30px 0; border-block: 1px solid var(--line); }
+.motorsport-strip span { font-family: var(--display); text-transform: uppercase; font-size: clamp(19px, 2.4vw, 32px); color: #c3ccd5; font-weight: 600; font-style: italic; letter-spacing: .025em; }
+.motorsport-strip span:first-child { max-width: 145px; font-size: 21px; line-height: 1; }
+@media (max-width: 950px) { .brand-layout { grid-template-columns: 1fr; gap: 12px; } .brand-world { max-width: 680px; margin: 0 auto; width: 100%; padding-top: 0; } .world-map { width: 100%; margin-left: 0; } }
+@media (max-width: 600px) { .motorsport-strip { flex-wrap: wrap; justify-content: center; gap: 24px; padding: 25px 0; } .motorsport-strip span:first-child { font-size: 17px; max-width: 100px; } .brand-argument { gap: 14px; } }

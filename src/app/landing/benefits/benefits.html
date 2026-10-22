@@ -1,0 +1,17 @@
+<section id="beneficios" data-section tabindex="-1" aria-labelledby="benefits-title" class="benefits-section section">
+  <div class="container">
+    <lm-section-bar [section]="content" />
+    <div class="benefits-heading"><div><span class="kicker">{{ content.kicker }}</span><h2 id="benefits-title" class="display-heading">{{ content.title }}</h2></div></div>
+    <div class="benefits-layout">
+      <div class="benefit-artwork" aria-hidden="true"><div class="benefit-ring"></div><div class="benefit-axis"></div>
+        @for (art of artwork; track art; let i = $index) { <img [src]="'assets/' + art" [attr.srcset]="i === 2 ? null : 'assets/' + art + ' 1x, assets/' + art.replace('.png', '@2x.png') + ' 2x'" alt="" [class.is-active]="active() === i" [class.is-app]="i === 2" [attr.width]="i === 2 ? 1024 : i === 1 ? 108 : 93" [attr.height]="i === 2 ? 651 : i === 1 ? 108 : 93" loading="lazy"> }
+      </div>
+      <div class="benefit-accordion">@for (benefit of content.benefits; track benefit.number; let i = $index) {
+        <details name="station-benefits" [open]="active() === i" (toggle)="onToggle(i, $event)">
+          <summary><img [src]="'assets/benefit-number-' + (i + 1) + '.png'" alt="" width="45" height="46" loading="lazy"><span class="sr-only">{{ benefit.number }}</span><h3>{{ benefit.title }}</h3><span class="benefit-toggle" aria-hidden="true"></span></summary>
+          <div class="benefit-description"><p>{{ benefit.description }}</p></div>
+        </details>
+      }</div>
+    </div>
+  </div>
+</section>

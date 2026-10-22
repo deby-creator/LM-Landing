@@ -1,0 +1,48 @@
+.contact-section { background: radial-gradient(ellipse at 50% 4%, #9c071347, transparent 62%), linear-gradient(180deg, #130c13, #080b10); padding-bottom: 35px; }
+.contact-layout { display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); align-items: start; gap: clamp(40px,7vw,100px); padding: 18px 0 30px; }
+.contact-statement { margin: 0; max-width: 440px; text-align: left; }
+.contact-statement::before { content: ''; display: block; width: 42px; height: 3px; background: var(--red); margin-bottom: 28px; }
+.contact-statement h2 { font-family: var(--display); font-weight: 600; font-size: clamp(48px,5.5vw,80px); text-transform: uppercase; letter-spacing: -.015em; line-height: 1.04; margin: 0; text-wrap: balance; }
+.contact-form { width: 100%; min-width: 0; margin: 0; background: transparent; }
+.form-heading { margin-bottom: 30px; }
+.form-heading h3 { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin: 0; color: #d8e1ec; }
+.form-fields { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); column-gap: 28px; row-gap: 26px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.form-field--wide { grid-column: 1 / -1; }
+.form-field label, .contact-intent legend { color: #bbc8d7; font-size: 13px; font-weight: 500; letter-spacing: .02em; }
+.form-field input { width: 100%; min-height: 44px; padding: 6px 0 11px; color: white; font: 400 16px/1.5 var(--body); background: transparent; border: 0; border-bottom: 1px solid #9eafc066; border-radius: 0; outline: 0; transition: border-color .2s, box-shadow .2s; }
+.form-field:focus-within label { color: #c5e5ff; }
+.form-field input:hover { border-bottom-color: #9eafc0aa; }
+.form-field input:focus-visible { border-color: #89c4f4; box-shadow: 0 1px 0 #89c4f4; }
+.contact-intent { min-inline-size: 0; margin: 30px 0 0; padding: 0; border: 0; }
+.intent-options { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px 20px; }
+.contact-intent legend { width: 100%; padding: 0; margin-bottom: 16px; }
+.contact-intent label { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: #c2cedd; font-size: 14px; cursor: pointer; line-height: 1.4; }
+.contact-intent label:has(input:checked) { color: white; }
+.contact-intent input { appearance: none; flex-shrink: 0; display: grid; place-items: center; width: 18px; height: 18px; margin: 0; border: 1px solid #96abc0; border-radius: 50%; background: transparent; cursor: pointer; }
+.contact-intent input::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--red); transform: scale(0); transition: transform .15s ease; }
+.contact-intent input:checked { border-color: var(--red); }
+.contact-intent input:checked::before { transform: scale(1); }
+.contact-intent input:focus-visible { outline: 2px solid #89c4f4; outline-offset: 4px; }
+.form-footer { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 26px; }
+.form-footer button { min-height: 48px; min-width: 190px; padding: 12px 24px; background: transparent; border: 1px solid #65758a; border-radius: 2px; color: #a9b8ca; font-size: 14px; font-weight: 500; cursor: not-allowed; }
+.form-footer p { max-width: 350px; margin: 0; color: #91a2b4; font-size: 12px; line-height: 1.5; }
+.brand-signature { display: flex; justify-content: center; align-items: center; gap: 25px; margin-top: 60px; overflow: hidden; height: 53px; }
+.brand-signature img { width: 78px; height: 53px; object-fit: cover; object-position: left; }
+.brand-signature span { width: 60px; height: 1px; background: #ffffff30; }
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr; gap: 38px; max-width: 680px; margin-inline: auto; }
+  .contact-statement { max-width: 620px; }
+  .contact-statement h2 { font-size: clamp(46px,7vw,64px); }
+  .contact-statement::before { margin-bottom: 20px; }
+}
+@media (max-width: 600px) {
+  .contact-layout { padding-top: 0; gap: 32px; }
+  .form-heading { margin-bottom: 24px; }
+  .form-fields { grid-template-columns: 1fr; row-gap: 19px; }
+  .form-field--wide { grid-column: auto; }
+  .contact-intent { margin-top: 28px; }
+  .intent-options { grid-template-columns: 1fr; gap: 0; }
+  .form-footer { align-items: stretch; flex-direction: column; }
+  .brand-signature { margin-top: 50px; }
+}

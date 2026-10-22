@@ -1,0 +1,16 @@
+<section id="respaldo" data-section tabindex="-1" aria-labelledby="brand-title" class="brand-section section">
+  <div class="container">
+    <lm-section-bar [section]="content" />
+    <div class="brand-layout">
+      <div class="brand-copy"><span class="kicker">{{ content.kicker }}</span><h2 id="brand-title" class="display-heading">{{ content.title }}</h2>
+        <p class="section-intro">{{ content.lead }}</p>
+        <div class="brand-arguments">@for (feature of content.features; track feature.title; let i = $index) { <div class="brand-argument"><img [src]="'assets/' + icons[i] + '.png'" alt="" width="93" height="93" loading="lazy"><span class="sr-only">{{ feature.marker }}</span><div><h3>{{ feature.title }}</h3><p>{{ feature.description }}</p></div></div> }</div>
+      </div>
+      <div class="brand-world">
+        <div class="map-orbit" aria-hidden="true"></div>
+        <img class="world-map" src="assets/world-presence-map@2x.png" alt="Mapa de presencia internacional de LIQUI MOLY" width="985" height="601" loading="lazy">
+      </div>
+    </div>
+    <div class="motorsport-strip">@for (tag of content.tags; track tag) { <span>{{ tag }}</span> }</div>
+  </div>
+</section>

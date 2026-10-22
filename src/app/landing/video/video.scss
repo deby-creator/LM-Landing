@@ -1,0 +1,20 @@
+.video-section { background: #10151c; }
+.video-heading { display: grid; grid-template-columns: 1.2fr .8fr; gap: 80px; align-items: end; margin-bottom: 36px; }
+.video-heading .display-heading { margin-bottom: 0; } .video-heading p { margin-bottom: 0; font-size: 15px; }
+.video-frame { background: #050a10; border: 1px solid #ffffff26; clip-path: polygon(0 0,97% 0,100% 8%,100% 100%,3% 100%,0 92%); }
+.video-frame summary { min-height: 450px; position: relative; cursor: pointer; display: flex; align-items: end; list-style: none; padding: 42px 50px; }
+.video-frame summary::-webkit-details-marker { display: none; }
+.video-poster,.video-overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+.video-poster { object-fit: cover; object-position: center 55%; }
+.video-overlay { background: linear-gradient(0deg,#030810eb, #06101d20 80%); }
+.video-title { position: relative; z-index: 1; display: flex; align-items: center; gap: 24px; width: 100%; }
+.play-symbol { width: 70px; height: 70px; flex-shrink: 0; border: 1px solid #fff9; border-radius: 50%; display: grid; place-items: center; color: white; font-size: 21px; padding-left: 4px; background: #ffffff10; backdrop-filter: blur(10px); transition: background .2s,transform .2s; }
+.video-frame summary:hover .play-symbol { background: var(--red); transform: scale(1.06); }
+.video-title h3 { font-family: var(--display); text-transform: uppercase; font-weight: 500; font-size: 33px; margin: 0; }
+.video-expand { margin-left: auto; width: 18px; height: 18px; border: 1px solid white; border-left: 0; border-bottom: 0; }
+.video-information { padding: 28px 50px 35px; margin: 0; border-top: 1px solid var(--line); color: #cbd8e7; }
+.video-points { display: grid; grid-template-columns: repeat(3,1fr); gap: 40px; padding-top: 32px; }
+.video-points > div { position: relative; padding-left: 27px; } .check { position: absolute; left: 0; top: 2px; color: #6fb4f0; }
+.video-points h3 { font-size: 18px; margin: 0 0 10px; } .video-points p { font-size: 14px; margin: 0; }
+@media (max-width: 800px) { .video-heading { grid-template-columns: 1fr; gap: 20px; } .video-frame summary { min-height: 360px; padding: 30px; } .video-points { gap: 20px; } }
+@media (max-width: 600px) { .video-frame summary { min-height: 330px; padding: 25px; } .video-title { gap: 15px; } .play-symbol { width: 52px; height: 52px; font-size: 17px; } .video-title h3 { font-size: 25px; } .video-expand { display: none; } .video-information { padding: 25px; font-size: 15px; } .video-points { grid-template-columns: 1fr; gap: 25px; } }

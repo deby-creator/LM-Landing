@@ -1,0 +1,11 @@
+<section id="video" data-section tabindex="-1" aria-labelledby="video-title" class="video-section section">
+  <div class="container">
+    <lm-section-bar [section]="content" />
+    <div class="video-heading"><div><span class="kicker">{{ content.kicker }}</span><h2 id="video-title" class="display-heading">{{ content.title }}</h2></div><p class="section-intro">{{ content.lead }}</p></div>
+    @if (content.aside; as aside) {
+      <details class="video-frame"><summary aria-label="Ver información del espacio para video comercial"><img class="video-poster" src="assets/hero-station-1920.jpg" alt="" width="1920" height="1226" loading="lazy"><span class="video-overlay" aria-hidden="true"></span><div class="video-title"><span class="play-symbol">{{ aside.play }}</span><h3>{{ aside.title }}</h3><span class="video-expand" aria-hidden="true"></span></div></summary><p class="video-information">{{ aside.description }}</p></details>
+    }
+    <div class="video-points">@for (feature of content.features; track feature.title) { <div><span class="check">{{ feature.marker }}</span><h3>{{ feature.title }}</h3><p>{{ feature.description }}</p></div> }</div>
+    <lm-transition [content]="content.transition" />
+  </div>
+</section>

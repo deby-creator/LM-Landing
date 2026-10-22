@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" routerLink="/" fragment="inicio" (click)="closeMenu()" aria-label="LIQUI MOLY Service Station — Volver al inicio">
+      <span class="brand-logo"><img src="assets/liqui-moly-service-station-logo.png" alt="LIQUI MOLY Service Station" width="189" height="53"></span>
+    </a>
+    <button class="menu-toggle" type="button" (click)="menuOpen.set(!menuOpen())" [attr.aria-expanded]="menuOpen()" aria-controls="main-navigation" [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"><span></span><span></span></button>
+    <nav id="main-navigation" aria-label="Navegación principal" [class.is-open]="menuOpen()">
+      @for (link of links; track $index; let last = $last) {
+        <a routerLink="/" [fragment]="link.target" (click)="closeMenu()" [class.header-cta]="last" [class.active]="!last && navigation.active() === link.target" [attr.aria-current]="!last && navigation.active() === link.target ? 'location' : null">{{ link.label }}</a>
+      }
+    </nav>
+  </div>
+  <div class="reading-progress" aria-hidden="true"></div>
+</header>

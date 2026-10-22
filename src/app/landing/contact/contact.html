@@ -1,0 +1,26 @@
+<section id="contacto" data-section tabindex="-1" aria-labelledby="contact-title" class="contact-section section">
+  <div class="container">
+    <lm-section-bar [section]="content" />
+    <div class="contact-layout">
+    <div class="contact-statement"><h2 id="contact-title">{{ content.title }}</h2></div>
+    <form class="contact-form" aria-labelledby="form-title" (submit)="preventUnconfiguredSubmit($event)">
+      <div class="form-heading"><h3 id="form-title">{{ content.pillars[0].title }}</h3></div>
+      <div class="form-fields">
+        <div class="form-field form-field--wide"><label for="contact-name">Nombre</label><input id="contact-name" name="name" type="text" autocomplete="name" required maxlength="100"></div>
+        <div class="form-field"><label for="contact-company">Empresa</label><input id="contact-company" name="company" type="text" autocomplete="organization" required maxlength="120"></div>
+        <div class="form-field"><label for="contact-city">Ciudad</label><input id="contact-city" name="city" type="text" autocomplete="address-level2" required maxlength="100"></div>
+        <div class="form-field"><label for="contact-phone">Teléfono</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="25"></div>
+        <div class="form-field"><label for="contact-email">Correo</label><input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="160"></div>
+      </div>
+      <fieldset class="contact-intent"><legend>{{ content.pillars[2].title }}</legend>
+        <div class="intent-options">
+        <label><input type="radio" name="intent" value="solicitar-informacion" required><span>Solicitar información</span></label>
+        <label><input type="radio" name="intent" value="agendar-llamada" required><span>Agendar llamada</span></label>
+        </div>
+      </fieldset>
+      <div class="form-footer"><button type="submit" disabled aria-describedby="form-unavailable">Enviar solicitud</button><p id="form-unavailable">El envío se activará cuando se defina el canal de contacto.</p></div>
+    </form>
+    </div>
+    <div class="brand-signature" aria-hidden="true"><span></span><img src="assets/liqui-moly-header-logo.png" alt="" width="189" height="53"><span></span></div>
+  </div>
+</section>

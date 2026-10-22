@@ -1,0 +1,21 @@
+<section id="inicio" data-section tabindex="-1" aria-labelledby="hero-title">
+  <div class="hero-stage">
+    <picture class="hero-image">
+      <source type="image/jpeg" srcset="assets/hero-station-960.jpg 960w, assets/hero-station-1920.jpg 1920w" sizes="100vw">
+      <img src="assets/hero-liqui-moly-station.png" alt="Estación de servicio LIQUI MOLY al atardecer" width="1955" height="1248" fetchpriority="high">
+    </picture>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <div class="hero-heading">
+        <span class="hero-eyebrow">{{ content.badge }}</span>
+        <h1 id="hero-title"><span>{{ content.title[0] }}</span><span>{{ content.title[1] }}</span></h1>
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-statement"><div class="hero-flags"><img src="assets/flag-germany.png" alt="Alemania" width="40" height="40"><img src="assets/flag-mexico.png" alt="México" width="41" height="40"></div><p>{{ content.tagline }}</p></div>
+        <div class="hero-actions"><lm-action [action]="content.actions[0]" /><lm-action [action]="content.actions[1]" variant="outline" /></div>
+      </div>
+    </div>
+    <div class="hero-crosshair" aria-hidden="true"></div>
+  </div>
+  <div class="instrument-band"><div class="container"><lm-metrics [items]="content.metrics" /></div></div>
+</section>

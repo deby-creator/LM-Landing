@@ -1,0 +1,439 @@
+{
+  "header": {
+    "brand": [
+      "LIQUI",
+      "MOLY",
+      "SERVICE STATION",
+      "MÉXICO"
+    ],
+    "links": [
+      {
+        "label": "Nosotros",
+        "target": "quienes"
+      },
+      {
+        "label": "Service Station",
+        "target": "service"
+      },
+      {
+        "label": "Beneficios",
+        "target": "beneficios"
+      },
+      {
+        "label": "Video",
+        "target": "video"
+      },
+      {
+        "label": "Contacto",
+        "target": "contacto"
+      },
+      {
+        "label": "Quiero unirme",
+        "target": "contacto"
+      }
+    ]
+  },
+  "hero": {
+    "badge": "INGENIERÍA ALEMANA. VISIÓN MEXICANA.",
+    "title": [
+      "La nueva era",
+      "de las gasolineras"
+    ],
+    "tagline": "Hecho por gasolineros para gasolineros.",
+    "description": "Esta versión evoluciona la landing a una experiencia más dinámica: una portada comercial breve y, después, vistas independientes dentro de la misma pantalla, con retorno inmediato al inicio.",
+    "actions": [
+      {
+        "label": "Conocer Service Station →",
+        "target": "service"
+      },
+      {
+        "label": "Quiero unirme a la red",
+        "target": "contacto"
+      }
+    ],
+    "metrics": [
+      {
+        "value": "160+",
+        "label": "países"
+      },
+      {
+        "value": "20+",
+        "label": "años en México"
+      },
+      {
+        "value": "#1",
+        "label": "en Alemania"
+      }
+    ],
+    "explanation": {
+      "title": "¿Cómo funciona esta evolución?",
+      "description": "El usuario entra por una portada de alto impacto y luego navega cada bloque como si fueran pantallas internas, sin abandonar el flujo principal ni abrir ventanas nuevas.",
+      "features": [
+        {
+          "title": "Menos scroll",
+          "description": "La información se distribuye en vistas más digeribles."
+        },
+        {
+          "title": "Más claridad",
+          "description": "Cada tema tiene su propio espacio y objetivo."
+        },
+        {
+          "title": "Retorno simple",
+          "description": "Siempre hay botón de volver y logo para regresar a inicio."
+        },
+        {
+          "title": "Más conversión",
+          "description": "El CTA “Quiero unirme” permanece visible en la navegación."
+        }
+      ]
+    },
+    "index": [
+      {
+        "number": "01",
+        "title": "Respaldo de marca",
+        "description": "La fuerza internacional y el prestigio detrás del modelo.",
+        "label": "Abrir sección →",
+        "target": "respaldo"
+      },
+      {
+        "number": "02",
+        "title": "Quiénes somos",
+        "description": "Contexto breve, propuesta y enfoque para el mercado gasolinero.",
+        "label": "Abrir sección →",
+        "target": "quienes"
+      },
+      {
+        "number": "03",
+        "title": "Qué es Service Station",
+        "description": "El modelo de licenciamiento explicado de manera clara.",
+        "label": "Abrir sección →",
+        "target": "service"
+      },
+      {
+        "number": "04",
+        "title": "Beneficios",
+        "description": "Las cuatro palancas que fortalecen la operación diaria.",
+        "label": "Abrir sección →",
+        "target": "beneficios"
+      },
+      {
+        "number": "05",
+        "title": "Video",
+        "description": "Un espacio para mostrar el concepto en formato audiovisual.",
+        "label": "Abrir sección →",
+        "target": "video"
+      },
+      {
+        "number": "06",
+        "title": "Quiero unirme",
+        "description": "Llamada final a la acción con el paso siguiente bien visible.",
+        "label": "Abrir sección →",
+        "target": "contacto"
+      }
+    ],
+    "footnote": "Estructura recomendada: Portada → vistas internas por tema → botón de retorno dentro de la misma pantalla."
+  },
+  "sections": {
+    "respaldo": {
+      "id": "respaldo",
+      "back": "← Volver al inicio",
+      "label": "Respaldo de marca",
+      "kicker": "Marca y prestigio",
+      "title": "La credibilidad de la marca se vuelve argumento comercial.",
+      "lead": "Antes de hablar del modelo, conviene abrir con el respaldo que existe detrás: presencia internacional, trayectoria en México y liderazgo en Alemania.",
+      "features": [
+        {
+          "marker": "✓",
+          "title": "Presencia internacional",
+          "description": "Se comunica una red global con presencia en más de 160 países."
+        },
+        {
+          "marker": "✓",
+          "title": "Trayectoria consolidada",
+          "description": "La permanencia en el mercado mexicano ayuda a reducir fricción y generar confianza."
+        },
+        {
+          "marker": "✓",
+          "title": "Asociación con alto desempeño",
+          "description": "La marca se vincula con referentes como DTM, WRC, F1, NBA y MotoGP."
+        }
+      ],
+      "pillars": [],
+      "benefits": [],
+      "tags": [
+        "Carrera Panamericana",
+        "DTM",
+        "WRC",
+        "F1",
+        "NBA",
+        "MotoGP"
+      ],
+      "transition": {
+        "title": "Después del respaldo, el siguiente paso natural es explicar quiénes son.",
+        "description": "Esta navegación favorece que el visitante entienda primero el peso de la marca y después el valor del modelo.",
+        "action": {
+          "label": "Ir a Quiénes somos →",
+          "target": "quienes"
+        }
+      },
+      "aside": {
+        "label": "Sección interna",
+        "title": "Qué gana esta vista independiente",
+        "description": "Permite presentar la fuerza de la marca sin saturar la portada ni obligar al usuario a encontrar esta información entre demasiado texto.",
+        "metrics": [
+          {
+            "value": "160+",
+            "label": "países"
+          },
+          {
+            "value": "20+",
+            "label": "años en México"
+          },
+          {
+            "value": "#1",
+            "label": "en Alemania"
+          }
+        ],
+        "tags": [],
+        "features": [],
+        "play": ""
+      }
+    },
+    "quienes": {
+      "id": "quienes",
+      "back": "← Volver al inicio",
+      "label": "Quiénes somos",
+      "kicker": "Quiénes somos",
+      "title": "La marca que impulsa a los mejores, ahora trabaja para tu estación.",
+      "lead": "Esta pantalla debe contar, en pocos segundos, qué representa LIQUI MOLY Service Station y por qué es relevante para una estación de servicio en México.",
+      "features": [],
+      "pillars": [
+        {
+          "title": "Experiencia sectorial",
+          "description": "Un modelo desarrollado para cubrir necesidades del sector gasolinero mexicano."
+        },
+        {
+          "title": "Calidad al máximo nivel",
+          "description": "La promesa de marca se traduce en operación, imagen y soporte."
+        },
+        {
+          "title": "Innovación aplicada",
+          "description": "Tecnología, datos y procesos para una mejor gestión de estación."
+        }
+      ],
+      "benefits": [],
+      "tags": [],
+      "transition": {
+        "title": "Una vez entendido el “quiénes somos”, debe aparecer el “qué es”.",
+        "description": "La conversación avanza de la identidad al modelo sin hacer que la página se sienta interminable.",
+        "action": {
+          "label": "Ver qué es Service Station →",
+          "target": "service"
+        }
+      },
+      "aside": {
+        "label": "Lectura rápida",
+        "title": "Una propuesta que combina marca, operación y tecnología.",
+        "description": "Esta vista ayuda a que el usuario entienda el concepto sin tener que descifrar varios bloques apilados dentro de una sola landing lineal.",
+        "metrics": [],
+        "tags": [],
+        "features": [],
+        "play": ""
+      }
+    },
+    "service": {
+      "id": "service",
+      "back": "← Volver al inicio",
+      "label": "Qué es Service Station",
+      "kicker": "Modelo de licenciamiento",
+      "title": "Un modelo pensado para operar mejor, vender mejor y fidelizar mejor.",
+      "lead": "Aquí la explicación gana claridad al ocupar su propia “pantalla”. El visitante ya no ve un párrafo aislado dentro de una landing larga, sino una vista dedicada a entender el producto.",
+      "features": [
+        {
+          "marker": "1",
+          "title": "Integra tecnología",
+          "description": "Simplifica la operación y acerca la información a la toma de decisiones diaria."
+        },
+        {
+          "marker": "2",
+          "title": "Integra datos",
+          "description": "Favorece control, seguimiento y acciones con mayor visibilidad del negocio."
+        },
+        {
+          "marker": "3",
+          "title": "Integra innovación",
+          "description": "Apoya la rentabilidad y la fidelización a través de un modelo comercial más robusto."
+        }
+      ],
+      "pillars": [],
+      "benefits": [],
+      "tags": [],
+      "transition": {
+        "title": "Esta vista conduce naturalmente a beneficios.",
+        "description": "Después de explicar el modelo, la siguiente pantalla muestra sus resultados concretos para la operación.",
+        "action": {
+          "label": "Ver beneficios →",
+          "target": "beneficios"
+        }
+      },
+      "aside": {
+        "label": "Cómo se presenta mejor",
+        "title": "Qué debe ver el usuario primero",
+        "description": "En esta evolución conviene jerarquizar así: titular corto, descripción clara, 3 argumentos clave y CTA al siguiente paso.",
+        "metrics": [],
+        "tags": [
+          "Titular claro",
+          "Mensaje directo",
+          "CTA siguiente"
+        ],
+        "features": [],
+        "play": ""
+      }
+    },
+    "beneficios": {
+      "id": "beneficios",
+      "back": "← Volver al inicio",
+      "label": "Beneficios",
+      "kicker": "Beneficios",
+      "title": "Cuatro palancas para hacer más fuerte tu operación.",
+      "lead": "Esta pantalla concentra únicamente los beneficios para que el usuario no los pierda entre otros mensajes. La lectura mejora porque cada beneficio tiene su propio bloque y jerarquía.",
+      "features": [],
+      "pillars": [],
+      "benefits": [
+        {
+          "number": "01",
+          "title": "Inteligencia de compra de combustible",
+          "description": "Compara, elige y maximiza margen en cada pipa."
+        },
+        {
+          "number": "02",
+          "title": "Experiencia automotor única",
+          "description": "Imagen que atrae y un concepto diseñado para fidelizar."
+        },
+        {
+          "number": "03",
+          "title": "Tecnología en cada carga",
+          "description": "Tu operación completa, en la palma de tu mano."
+        },
+        {
+          "number": "04",
+          "title": "Soporte que genera resultados",
+          "description": "Respaldo operativo para acompañar el desempeño de la estación."
+        }
+      ],
+      "tags": [],
+      "transition": {
+        "title": "Cuando el beneficio ya quedó claro, el video se vuelve el refuerzo ideal.",
+        "description": "La vista siguiente puede usarse para insertar el video comercial real o un demo con el mismo sistema de navegación.",
+        "action": {
+          "label": "Ir al video →",
+          "target": "video"
+        }
+      },
+      "aside": null
+    },
+    "video": {
+      "id": "video",
+      "back": "← Volver al inicio",
+      "label": "Video",
+      "kicker": "Contenido audiovisual",
+      "title": "Una pantalla dedicada al video comercial.",
+      "lead": "En vez de dejar el video enterrado en medio del scroll, esta propuesta lo lleva a una vista específica. Aquí se puede insertar el video real, un reel comercial o un demo del producto.",
+      "features": [
+        {
+          "marker": "✓",
+          "title": "Mayor visibilidad",
+          "description": "El contenido audiovisual deja de competir con los demás bloques."
+        },
+        {
+          "marker": "✓",
+          "title": "Mejor foco",
+          "description": "El usuario sabe exactamente qué verá y qué espera al final del recorrido."
+        },
+        {
+          "marker": "✓",
+          "title": "Transición lógica",
+          "description": "Al terminar el video, el CTA final invita a unirse a la red."
+        }
+      ],
+      "pillars": [],
+      "benefits": [],
+      "tags": [],
+      "transition": {
+        "title": "El siguiente paso es la conversión.",
+        "description": "La vista final debe pedir la acción deseada con un mensaje claro y sin distracciones.",
+        "action": {
+          "label": "Ir a Quiero unirme →",
+          "target": "contacto"
+        }
+      },
+      "aside": {
+        "label": "",
+        "title": "Espacio para video comercial",
+        "description": "Aquí puede insertarse el video oficial manteniendo la navegación y el botón de retorno dentro de la misma interfaz.",
+        "metrics": [],
+        "tags": [],
+        "features": [],
+        "play": "▶"
+      }
+    },
+    "contacto": {
+      "id": "contacto",
+      "back": "← Volver al inicio",
+      "label": "Quiero unirme",
+      "kicker": "Llamada a la acción final",
+      "title": "Haz que tu estación forme parte de la nueva era.",
+      "lead": "La conversión tiene su propio espacio para evitar que se diluya al final de un scroll largo. En la versión productiva aquí convendría integrar formulario, WhatsApp, datos de contacto y un botón directo de solicitud.",
+      "features": [],
+      "pillars": [
+        {
+          "title": "Formulario breve",
+          "description": "Nombre, empresa, ciudad, teléfono y correo."
+        },
+        {
+          "title": "Canal directo",
+          "description": "Botón de WhatsApp o contacto comercial inmediato."
+        },
+        {
+          "title": "Siguiente paso claro",
+          "description": "“Solicitar información” o “Agendar llamada”."
+        }
+      ],
+      "benefits": [],
+      "tags": [],
+      "transition": {
+        "title": "Esta es la última pantalla del flujo.",
+        "description": "El objetivo aquí es convertir, no seguir explicando. Por eso la sección se siente más simple, más directa y más enfocada.",
+        "action": {
+          "label": "Volver al inicio",
+          "target": "inicio"
+        }
+      },
+      "aside": {
+        "label": "Recomendación final",
+        "title": "Qué convendría agregar en la versión publicada",
+        "description": "",
+        "metrics": [],
+        "tags": [],
+        "features": [
+          {
+            "marker": "1",
+            "title": "Logo oficial",
+            "description": "Usar el logotipo real y los activos de marca definitivos."
+          },
+          {
+            "marker": "2",
+            "title": "Video real",
+            "description": "Insertar el comercial o video explicativo definitivo."
+          },
+          {
+            "marker": "3",
+            "title": "Formulario/CRM",
+            "description": "Conectar la captación de leads con el canal comercial."
+          }
+        ],
+        "play": ""
+      }
+    }
+  }
+}

@@ -8,7 +8,74 @@
       @for (link of links; track $index; let last = $last) {
         <a routerLink="/" [fragment]="link.target" (click)="closeMenu()" [class.header-cta]="last" [class.active]="!last && navigation.active() === link.target" [attr.aria-current]="!last && navigation.active() === link.target ? 'location' : null">{{ link.label }}</a>
       }
+      <div class="header-tools" aria-label="Servicios">
+        <button class="billing-button" type="button" (click)="openBillingModal()"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.75h9l4 4v12.5H6zM15 3.75v4h4M9 12h7M9 15.5h7"/></svg><span>Facturación electrónica</span></button>
+        <button class="billing-button" type="button" (click)="openFlotillasModal()"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.75 6.5h11v10h-11zM13.75 10h4.5l3 3v3.5h-7.5zM6.5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm11.25 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg><span>Flotillas</span></button>
+      </div>
     </nav>
   </div>
   <div class="reading-progress" aria-hidden="true"></div>
+  @if (billingOpen()) {
+    <div class="billing-modal" role="presentation" (click)="closeBillingModal()">
+      <section class="billing-dialog" role="dialog" aria-modal="true" aria-labelledby="billing-title" aria-describedby="billing-description" (click)="$event.stopPropagation()">
+        <button class="billing-close" type="button" (click)="closeBillingModal()" aria-label="Cerrar">×</button>
+        <span class="billing-kicker">Facturación electrónica</span>
+        <h2 id="billing-title">Elige tu Service Station</h2>
+        <p id="billing-description">¿Dónde deseas continuar?</p>
+        <div class="billing-options">
+          <a href="https://liquimolyelpalomar.com/">Service Station Palomar <span aria-hidden="true">→</span></a>
+          <a href="https://gasolinerasliquimoly.com/">Service Station Santa Lucía <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </div>
+  }
+  @if (flotillasOpen()) {
+    <div class="billing-modal flotillas-modal" role="presentation" (click)="closeFlotillasModal()">
+      <section class="billing-dialog flotillas-dialog" role="dialog" aria-modal="true" aria-labelledby="flotillas-title" (click)="$event.stopPropagation()">
+        <button class="billing-close" type="button" (click)="closeFlotillasModal()" aria-label="Cerrar">×</button>
+        <span class="billing-kicker">Flotillas</span>
+        <h2 id="flotillas-title">Beneficios para tu flotilla</h2>
+        <nav class="flotillas-breadcrumbs" aria-label="Seleccionar estación">
+          <button type="button" [class.is-selected]="selectedFlotilla() === 'palomar'" [attr.aria-current]="selectedFlotilla() === 'palomar' ? 'page' : null" (click)="selectedFlotilla.set('palomar')">El Palomar</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" [class.is-selected]="selectedFlotilla() === 'santa-lucia'" [attr.aria-current]="selectedFlotilla() === 'santa-lucia' ? 'page' : null" (click)="selectedFlotilla.set('santa-lucia')">Santa Lucía</button>
+        </nav>
+        <div class="flotillas-document">
+          <article class="fleet-flyer" [class.fleet-flyer--santa]="selectedFlotilla() === 'santa-lucia'">
+            <section class="fleet-cover">
+              <div class="fleet-brand"><img src="assets/liqui-moly-service-station-logo.png" alt="LIQUI MOLY Service Station"><span>ESTACIÓN {{ flotillaContent.station }}</span></div>
+              <div class="fleet-cover-copy"><span>SOLUCIONES PARA FLOTILLAS</span><h3>Confianza<br>en cada carga</h3><p>Más control detrás de cada litro</p></div>
+            </section>
+            <img class="fleet-palomar-photo" src="assets/flotillas-palomar-truck-feature.png" [alt]="'Camión LIQUI MOLY Service Station con sello de calidad para ' + flotillaContent.station">
+            <div class="fleet-promise"><span class="fleet-promise-mark">Q360</span><div><strong>¿Qué hay detrás de cada carga?</strong><span>Calidad · Control · Atención · Administración</span></div></div>
+            <section class="fleet-benefit-grid">
+              @for (item of flotillaContent.items; track item.title) {
+                <article class="fleet-benefit"><span class="fleet-benefit-icon" aria-hidden="true">{{ item.icon }}</span><div><h4>{{ item.title }}</h4><ul>@for (line of item.lines; track line) { <li>{{ line }}</li> }</ul></div></article>
+              }
+            </section>
+            <div class="fleet-footnote">{{ flotillaContent.note }}</div>
+            <section class="fleet-contact" aria-labelledby="fleet-contact-title">
+              <div class="fleet-contact-heading"><span>Atención para flotillas</span><h4 id="fleet-contact-title">Para más información, contáctanos o llena el formulario</h4></div>
+              <div class="fleet-contact-layout">
+                <address class="fleet-contact-details">
+                  <a [href]="'tel:+52' + flotillaContent.contact.phoneHref"><span aria-hidden="true">☎</span>{{ flotillaContent.contact.phone }}</a>
+                  <a href="mailto:atencion.calidad@liqui-moly.mx"><span aria-hidden="true">✉</span>atencion.calidad@liqui-moly.mx</a>
+                  <p><span aria-hidden="true">⌖</span><span>{{ flotillaContent.contact.addressFirst }}<br>{{ flotillaContent.contact.addressSecond }}</span></p>
+                </address>
+                <form class="fleet-contact-form" (submit)="submitFleetInquiry($event)">
+                  <h5>Formulario breve</h5>
+                  <label class="fleet-name-field">Nombre<input name="name" type="text" autocomplete="name" required></label>
+                  <label>Empresa<input name="company" type="text" autocomplete="organization" required></label>
+                  <label>Ciudad<input name="city" type="text" autocomplete="address-level2"></label>
+                  <label>Teléfono<input name="phone" type="tel" autocomplete="tel" required></label>
+                  <label>Correo<input name="email" type="email" autocomplete="email" required></label>
+                  <button type="submit">Enviar solicitud <span aria-hidden="true">→</span></button>
+                </form>
+              </div>
+            </section>
+          </article>
+        </div>
+      </section>
+    </div>
+  }
 </header>

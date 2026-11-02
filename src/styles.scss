@@ -16,6 +16,7 @@
 html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
 body:has(.menu-toggle[aria-expanded=true]) { overflow: hidden; }
+body:has(.billing-modal) { overflow: hidden; }
 main { display: block; }
 section[data-section] { scroll-margin-top: 88px; }
 section[tabindex='-1']:focus { outline: none; }

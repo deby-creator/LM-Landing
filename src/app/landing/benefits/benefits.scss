@@ -11,7 +11,6 @@
 .benefit-axis::after { content: ''; position: absolute; height: 380px; width: 1px; background: linear-gradient(transparent,#325a7d88,transparent); left: 50%; top: -190px; }
 .benefit-artwork img { position: absolute; width: 155px; height: auto; border-radius: 50%; opacity: 0; transform: scale(.88); transition: opacity .35s,transform .45s; filter: drop-shadow(0 15px 30px #0006); pointer-events: none; }
 .benefit-artwork img.is-active { opacity: 1; transform: scale(1); }
-.benefit-artwork img.is-app { width: 110%; max-width: 560px; border-radius: 0; }
 .benefit-accordion details { border-top: 1px solid #ffffff26; }
 .benefit-accordion details:last-child { border-bottom: 1px solid #ffffff26; }
 summary { display: flex; align-items: center; gap: 22px; list-style: none; cursor: pointer; padding: 26px 0; }
@@ -25,5 +24,21 @@ details[open] .benefit-toggle::after { transform: rotate(0); }
 details[open] summary h3 { color: white; }
 details[open] { border-top-color: var(--red); }
 .benefit-description { padding: 0 25px 26px 61px; } .benefit-description p { margin: 0; font-size: 17px; }
+.benefits-comparison { margin-top: 80px; padding-top: 34px; border-top: 1px solid #ffffff26; }
+.comparison-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 26px; }
+.comparison-heading .kicker { margin: 0; }
+.comparison-heading h3 { max-width: 430px; margin: 0; color: #d4ddea; font-family: var(--display); font-size: 25px; font-weight: 500; line-height: 1.1; text-align: right; text-transform: uppercase; }
+.comparison-scroll { overflow-x: auto; border: 1px solid #ffffff18; }
+.comparison-scroll table { width: 100%; min-width: 680px; border-collapse: collapse; }
+.comparison-scroll th, .comparison-scroll td { padding: 25px 24px; border-bottom: 1px solid #ffffff14; text-align: left; }
+.comparison-scroll thead { background: #162747; }
+.comparison-scroll thead th { color: #aab9cc; font-family: var(--display); font-size: 14px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.comparison-scroll thead th:nth-child(2) { color: #f45b6d; }
+.comparison-scroll tbody tr:last-child > * { border-bottom: 0; }
+.comparison-scroll tbody th { width: 23%; color: #aab9cc; font-family: var(--display); font-size: 15px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.comparison-scroll tbody td { color: #dce5f0; font-size: 16px; font-weight: 500; }
+.comparison-scroll tbody td:nth-child(2) { color: white; }
+.comparison-scroll tbody td:nth-child(2)::before { content: ''; display: inline-block; width: 7px; height: 7px; margin: 0 12px 2px 0; border-radius: 50%; background: var(--red); }
+.comparison-scroll tbody td:nth-child(3) { color: #9facbd; }
 @media (max-width: 1000px) { .benefits-heading { gap: 35px; } .benefits-layout { gap: 35px; grid-template-columns: .7fr 1.3fr; } .benefit-ring { width: 230px; height: 230px; } .benefit-artwork { min-height: 300px; } }
-@media (max-width: 700px) { .benefits-heading { grid-template-columns: 1fr; gap: 20px; margin-bottom: 20px; } .benefits-layout { grid-template-columns: 1fr; gap: 12px; } .benefit-artwork { min-height: 240px; } .benefit-ring { width: 185px; height: 185px; } .benefit-artwork img { width: 115px; } .benefit-artwork img.is-app { width: 320px; } .benefit-axis::after { height: 240px; top: -120px; } summary { padding: 24px 0; gap: 16px; } summary h3 { font-size: 28px; } .benefit-description { padding-left: 55px; } }
+@media (max-width: 700px) { .benefits-heading { grid-template-columns: 1fr; gap: 20px; margin-bottom: 20px; } .benefits-layout { grid-template-columns: 1fr; gap: 12px; } .benefit-artwork { min-height: 240px; } .benefit-ring { width: 185px; height: 185px; } .benefit-artwork img { width: 115px; } .benefit-axis::after { height: 240px; top: -120px; } summary { padding: 24px 0; gap: 16px; } summary h3 { font-size: 28px; } .benefit-description { padding-left: 55px; } .benefits-comparison { margin-top: 50px; padding-top: 26px; } .comparison-heading { display: block; } .comparison-heading h3 { margin-top: 8px; font-size: 23px; text-align: left; } .comparison-scroll th, .comparison-scroll td { padding: 20px 16px; } }

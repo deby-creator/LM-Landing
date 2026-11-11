@@ -4,11 +4,19 @@
     <div class="benefits-heading"><div><span class="kicker">{{ content.kicker }}</span><h2 id="benefits-title" class="display-heading">{{ content.title }}</h2></div></div>
     <div class="benefits-layout">
       <div class="benefit-artwork" aria-hidden="true"><div class="benefit-ring"></div><div class="benefit-axis"></div>
-        @for (art of artwork; track art; let i = $index) { <img [src]="'assets/' + art" [attr.srcset]="i === 0 ? 'assets/' + art + ' 1x, assets/' + art.replace('.png', '@2x.png') + ' 2x' : null" alt="" [class.is-active]="active() === i" width="93" height="93" loading="lazy"> }
+        @for (art of artwork; track art; let i = $index) { <img [src]="'assets/' + art" alt="" [class.is-active]="active() === i" [class.is-photo]="i < 4" [class.is-technology-photo]="i === 2" width="93" height="93" loading="lazy"> }
       </div>
       <div class="benefit-accordion">@for (benefit of content.benefits; track benefit.number; let i = $index) {
         <details name="station-benefits" [open]="active() === i" (toggle)="onToggle(i, $event)">
-          <summary><img [src]="'assets/benefit-number-' + (i + 1) + '.png'" alt="" width="45" height="46" loading="lazy"><span class="sr-only">{{ benefit.number }}</span><h3>{{ benefit.title }}</h3><span class="benefit-toggle" aria-hidden="true"></span></summary>
+          <summary>
+            @if (i < 4) {
+              <img class="benefit-marker-number" [src]="'assets/benefit-number-' + (i + 1) + '.png'" alt="" width="45" height="46" loading="lazy">
+              <img class="benefit-marker-icon" [src]="'assets/' + markerIcons[i]" alt="" width="45" height="46">
+            } @else {
+              <img class="benefit-marker-number" [src]="'assets/benefit-number-' + (i + 1) + '.png'" alt="" width="45" height="46" loading="lazy">
+            }
+            <span class="sr-only">{{ benefit.number }}</span><h3>{{ benefit.title }}</h3><span class="benefit-toggle" aria-hidden="true"></span>
+          </summary>
           <div class="benefit-description"><p>{{ benefit.description }}</p></div>
         </details>
       }</div>

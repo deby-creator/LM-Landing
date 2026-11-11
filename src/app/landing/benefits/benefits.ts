@@ -6,7 +6,8 @@ import { SectionBar } from '../../shared/section-bar';
 export class BenefitsSection {
   readonly content = CONTENT.sections.beneficios;
   readonly active = signal(0);
-  readonly artwork = ['icon-fuel-truck.png', 'benefit-icon-automotive.svg', 'benefit-icon-technology.svg', 'benefit-icon-support.svg'];
+  readonly artwork = ['benefit-fuel-depot.jpg.jpeg', 'benefit-automotive-station.png', 'benefit-technology-station.png', 'benefit-support-germany.png'];
+  readonly markerIcons: string[] = ['icon-fuel-truck.png', 'benefit-icon-automotive.svg', 'benefit-icon-technology.svg', 'benefit-icon-support.svg'];
   onToggle(index: number, event: Event): void {
     if ((event.target as HTMLDetailsElement).open) this.active.set(index);
   }
